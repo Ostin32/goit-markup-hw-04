@@ -120,6 +120,41 @@ body {
   margin-right: 50px;
 }
 
+.header-connect-icon {
+  display: flex;
+  align-items: center;
+}
+
+.mail-icon {
+  margin-right: 10px;
+  fill: #757575;
+}
+
+.tel-icon {
+  fill: #757575;
+  margin-left: 30px;
+}
+
+.tel-icon:hover,
+.tel-icon:focus {
+  background-color: #ffffff;
+}
+
+.header-icon:hover .tel-icon,
+.header-icon:focus .tel-icon {
+  fill: var(--accent-color);
+}
+
+.mail-icon:hover,
+.mail-icon:focus {
+  background-color: #ffffff;
+}
+
+.header-icon:hover .mail-icon,
+.header-icon:focus .mail-icon {
+  fill: var(--accent-color);
+}
+
 .header-mail,
 .header-tel {
   font-weight: 500;
@@ -127,10 +162,6 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--second-btn-color);
-}
-
-.header-tel {
-  margin-left: 50px;
 }
 
 .header-link:hover,
@@ -147,9 +178,23 @@ body {
 /*---- HERO----- */
 
 .hero {
+  background: #2f303a;
   padding-top: 200px;
   padding-bottom: 200px;
-  background: #2f303a;
+}
+
+.overlay {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/Hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -182,11 +227,23 @@ body {
   left: 700px;
   margin-left: 500px;
   padding: 10px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .main {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.main-icon {
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  display: flex;
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
 }
 
 .main-list {
@@ -248,7 +305,7 @@ body {
 }
 
 .about {
-  background: #f5f4fa;
+  background-color: #f5f4fa;
   padding-bottom: 94px;
   padding-top: 94px;
 }
@@ -276,6 +333,11 @@ body {
 .team {
   padding-top: 30px;
   padding-bottom: 34px;
+  background-color: #ffffff;
+}
+
+img {
+  display: block;
 }
 
 .about-list {
@@ -284,9 +346,52 @@ body {
   margin-left: -30px;
 }
 
+.about-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
 .item-container {
   width: calc(100% / 4 - 30px);
   margin-left: 30px;
+}
+
+.team-social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.team-social-item {
+  list-style-type: none;
+}
+
+.team-social-item + .team-social-item {
+  margin-left: 10px;
+}
+
+.team-social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.team-social-icon {
+  fill: #afb1b8;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.team-social-link:hover .team-social-icon,
+.team-social-link:focus .team-social-icon {
+  fill: #ffffff;
 }
 
 .about-work-position {
@@ -295,10 +400,67 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-btn-color);
+  margin-bottom: 16px;
+}
+
+/* ------clients----- */
+
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-icon {
+  padding: 16px 32px;
+}
+
+.clients-icon:hover,
+.clients-icon:focus {
+  border-color: var(--accent-color);
+}
+
+.clients-container:hover .clients-icon,
+.clients-container:focus .clients-icon {
+  fill: var(--accent-color);
+}
+
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--first-btn-color);
+  margin-bottom: 50px;
+}
+
+.clients-content {
+  width: 170px;
+  height: 92px;
+}
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+
+.clients-container {
+  padding: 0;
+  margin-left: 30px;
+  width: calc(100% / 6 - 30px);
+}
+
+.clients-icon {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  fill: #afb1b8;
 }
 
 /*----- FOOTER------- */
-
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -344,12 +506,67 @@ p {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/*----- PORTFOLIO -----*/
-/*---- ГЕРОЙ ---*/
-
-.header-portfolio {
-  border-bottom: 1px solid #ececec;
+.footer-container {
+  display: flex;
+  align-items: baseline;
 }
+
+.center-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-center {
+  margin-left: 70px;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social-item {
+  list-style-type: none;
+}
+
+.footer-social-item + .footer-social-item {
+  margin-left: 10px;
+}
+
+.footer-social-link {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.footer-social-icon {
+  fill: #ffffff;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-social-link:hover .footer-social-icon,
+.footer-social-link:focus .footer-social-icon {
+  fill: #ffffff;
+}
+
+/*----- PORTFOLIO -----*/
+
+/*---- ГЕРОЙ ---*/
 
 .hero-portfolio {
   padding-top: 94px;
@@ -377,28 +594,32 @@ p {
   margin-right: 10px;
 }
 
-.first-btn {
+.portfolio-btn {
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
+.list-btn {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
-  color: var(--first-btn-color);
-  color: #ffffff;
-  background: #2196f3;
+  color: #212121;
+  padding: 6px 22px;
+}
+
+.list-btn:hover,
+.list-btn:focus {
+  background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  padding: 6px 22px;
 }
 
-.list-btn {
-  padding: 6px 22px;
-}
-
-.first-btn:hover,
-.first-btn:focus {
-  color: violet;
+.portfolio-btn:hover .list-btn,
+.portfolio-btn:focus .list-btn {
+  color: #ffffff;
 }
 
 .list-portfolio {
@@ -412,6 +633,12 @@ p {
   margin-left: 30px;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
+}
+
+.card-portfolio:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 
 .card-title {
